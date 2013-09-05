@@ -1,0 +1,9 @@
+#! /usr/bin/env python
+
+Import( 'env' )
+
+env = env.Copy()
+
+env.MergeFlags( env['LASH10_FLAGS'] )
+env.StaticLibrary( target="qlash", source= ['qlash.cpp'] )
+
